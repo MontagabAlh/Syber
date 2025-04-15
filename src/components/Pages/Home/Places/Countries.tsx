@@ -18,7 +18,7 @@ export default function Countries() {
         <div className='flex flex-wrap justify-center items-center px-5 md:px-24 gap-5 mt-10'>
             {
                 countries.map((item, index) => (
-                    <div key={index} className='flex justify-between items-center rounded-xl bg-white shadow-2xl w-[270px] p-3'>
+                    <div key={index} className='flex justify-between items-center rounded-xl bg-white shadow-2xl w-[270px] p-3 cursor-pointer'>
                         <div
                             style={{
                                 backgroundImage: `url(${item.flag})`,

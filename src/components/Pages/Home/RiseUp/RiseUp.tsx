@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 
 export default function RiseUp() {
     const Location = [
-        { name: "امريكا" },
-        { name: "اسيا" },
+        { name: "افريقيا" },
         { name: "اروبا" },
-        { name: "افريقيا" }
+        { name: "اسيا" },
+        { name: "امريكا" },
     ]
 
     const Serves = [
@@ -15,7 +15,7 @@ export default function RiseUp() {
         { name: 'الخرطوم', contry: 'السودان', image: Sudan, flag: SudanFlag },
         { name: 'الرياض', contry: 'السعودية', image: Saudi, flag: SaudiFlag },
     ]
-    const [select, SetSelect] = useState(3)
+    const [select, SetSelect] = useState(0)
     return (
         <div
             style={{
@@ -26,7 +26,7 @@ export default function RiseUp() {
             }}
             className='bg-[#FCFCFC] flex flex-col items-center justify-center gap-10 py-20'>
             <h1 className='text-[#2B1F51] text-[30px] md:text-[40px] font-bold'>ارتقي عالمياً ومحلياً</h1>
-            <div className='flex items-center gap-5 bg-[#F6F6F6] rounded-md p-1'>
+            <div dir="rtl" className='flex items-center gap-5 bg-[#F6F6F6] rounded-md p-1'>
                 {
                     Location.map((item, index) => (
                         <div key={index} className={`${select === index ? "bg-white" : "bg-transparent"} flex items-center justify-center w-[60px] md:w-[117px] h-[37px] rounded-md cursor-pointer`} onClick={() => SetSelect(index)}>{item.name}</div>
