@@ -5,6 +5,7 @@ import Navbar from "@/components/Layout/Navbar";
 
 const cairo = Cairo({
   variable: "--font-cairo",
+  subsets: ["arabic"],
 });
 
 export const metadata: Metadata = {
